@@ -21,7 +21,7 @@ def start_command_handler(message: types.Message):
     bot.send_video(message.chat.id, 'https://c.tenor.com/38Yekx6F7vEAAAAC/predator-arnold.gif', None, 'Text')
     bot.send_message(
         chat_id=message.chat.id, # id чата, в который необходимо направить сообщение
-        text='Привет, {0.first_name}! Я умею проверять JSON и форматировать его в красивый текст.\n\nВведи JSON в виде строки или выбери одно из действий ниже'.format(message.from_user, bot.get_me()), reply_markup=markup, # текст сообщения
+        text='Привет, {0.first_name}! Я умею проверять JSON и форматировать его в красивый текст.\n\nВведи JSON в виде строки или выбери одно из действий ниже.'.format(message.from_user, bot.get_me()), reply_markup=markup, # текст сообщения
     )
 
 
