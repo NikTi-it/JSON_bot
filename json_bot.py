@@ -5,7 +5,7 @@
 from telebot import TeleBot, types
 import json
 
-bot = TeleBot(token='ТОКЕН', parse_mode='html') 
+bot = TeleBot(token='5417708512:AAGdoxl4PT6v9jx_9uYP1mx3kVaxUdF-gC8', parse_mode='html') 
 
 
 # обработчик команды '/start'
@@ -21,7 +21,7 @@ def start_command_handler(message: types.Message):
     bot.send_video(message.chat.id, 'https://c.tenor.com/38Yekx6F7vEAAAAC/predator-arnold.gif', None, 'Text')
     bot.send_message(
         chat_id=message.chat.id, # id чата, в который необходимо направить сообщение
-        text='Привет, {0.first_name}! Я умею проверять JSON и форматировать его в красивый текст.\n\nВведи JSON в виде строки или нажми на кнопку.'.format(message.from_user, bot.get_me()), reply_markup=markup, # текст сообщения
+        text='Привет, {0.first_name}! Я умею проверять JSON и форматировать его в красивый текст.\n\nВведи JSON в виде строки или выбери одно из действий ниже'.format(message.from_user, bot.get_me()), reply_markup=markup, # текст сообщения
     )
 
 
